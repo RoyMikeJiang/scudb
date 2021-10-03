@@ -6,3 +6,4 @@
 | 作业编号 | Branch名字 | 主要内容 |
 | :--:  | :--:  | :--:  |
 | 01 | [Project1](https://github.com/RoyMikeJiang/scudb/tree/Project1) | Matrix相关实现 |
+| 02 | [Project2](https://github.com/RoyMikeJiang/scudb/tree/Project2) | northwind.db 查询 |
