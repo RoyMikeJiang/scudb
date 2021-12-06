@@ -179,4 +179,20 @@ Page *BufferPoolManager::NewPage(page_id_t &page_id) {
   TargetPage->ResetMemory();
   return TargetPage;
 }
+
+int BufferPoolManager::GetPagePinCount(const page_id_t &page_id) {
+    Page *page = nullptr;
+    if (!page_table_->Find(page_id, page)) {
+        return 0;
+    }
+    return page->GetPinCount();
+}
+
+bool BufferPoolManager::AllPageUnpined() {
+    for (size_t i = 1; i < pool_size_; i++) {
+        if (pages_[i].pin_count_ != 0)
+            return false;
+    }
+    return true;
+}
 } // namespace scudb

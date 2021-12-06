@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/roy/scudb_initial/src
-# Build directory: /home/roy/scudb_initial/build/src
+# Source directory: /mnt/c/Developing/Database/Project3/src
+# Build directory: /mnt/c/Developing/Database/Project3/build/src
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

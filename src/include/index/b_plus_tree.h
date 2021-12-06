@@ -12,6 +12,8 @@
 
 #include <queue>
 #include <vector>
+#include <mutex>
+#include <atomic>
 
 #include "concurrency/transaction.h"
 #include "index/index_iterator.h"
@@ -60,10 +62,13 @@ public:
                       Transaction *transaction = nullptr);
   // expose for test purpose
   B_PLUS_TREE_LEAF_PAGE_TYPE *FindLeafPage(const KeyType &key,
+                                           OperationType operation,
+                                           Transaction *transaction = nullptr,
                                            bool leftMost = false);
 
+  void UnLatchAndUnpinPageSet(Transaction *transaction, OperationType op);
 private:
-  void StartNewTree(const KeyType &key, const ValueType &value);
+  void StartNewTree(const KeyType &key, const ValueType &value, Transaction *transaction);
 
   bool InsertIntoLeaf(const KeyType &key, const ValueType &value,
                       Transaction *transaction = nullptr);
@@ -79,21 +84,30 @@ private:
 
   template <typename N>
   bool Coalesce(
+      bool isLeftSibling,
       N *&neighbor_node, N *&node,
       BPlusTreeInternalPage<KeyType, page_id_t, KeyComparator> *&parent,
       int index, Transaction *transaction = nullptr);
 
-  template <typename N> void Redistribute(N *neighbor_node, N *node, int index);
+  template <typename N> void Redistribute(bool isLeftSibling, N *neighbor_node, N *node, int index);
 
-  bool AdjustRoot(BPlusTreePage *node);
+  bool AdjustRoot(BPlusTreePage *node, Transaction *transaction);
 
   void UpdateRootPageId(int insert_record = false);
 
+  void DeleteRootPageId();
+
+  Page *GetPage(page_id_t page_id, std::string msg);
+
+  template <typename N>
+  bool FindSibling(N *node, N * &sibling);
+
   // member variable
   std::string index_name_;
-  page_id_t root_page_id_;
+  std::atomic<page_id_t> root_page_id_;
   BufferPoolManager *buffer_pool_manager_;
   KeyComparator comparator_;
+  std::mutex root_id_mutex_;
 };
 
-} // namespace scudb
+} // namespace cmudb

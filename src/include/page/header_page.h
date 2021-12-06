@@ -41,4 +41,4 @@ private:
 
   void SetRecordCount(int record_count);
 };
-} // namespace scudb
+} // namespace cmudb

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roy/scudb_initial
+CMAKE_SOURCE_DIR = /mnt/c/Developing/Database/Project3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roy/scudb_initial/build
+CMAKE_BINARY_DIR = /mnt/c/Developing/Database/Project3/build
 
 # Utility rule file for ExperimentalBuild.
 
@@ -71,6 +71,6 @@ CMakeFiles/ExperimentalBuild.dir/clean:
 .PHONY : CMakeFiles/ExperimentalBuild.dir/clean
 
 CMakeFiles/ExperimentalBuild.dir/depend:
-	cd /home/roy/scudb_initial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/roy/scudb_initial /home/roy/scudb_initial /home/roy/scudb_initial/build /home/roy/scudb_initial/build /home/roy/scudb_initial/build/CMakeFiles/ExperimentalBuild.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Developing/Database/Project3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Developing/Database/Project3 /mnt/c/Developing/Database/Project3 /mnt/c/Developing/Database/Project3/build /mnt/c/Developing/Database/Project3/build /mnt/c/Developing/Database/Project3/build/CMakeFiles/ExperimentalBuild.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalBuild.dir/depend
 

@@ -1,0 +1,1 @@
+-IC:/Developing/Database/Project3/src -IC:/Developing/Database/Project3/src/include -IC:/Developing/Database/Project3/test/include -IC:/Developing/Database/Project3/third_party -isystem C:/Developing/Database/Project3/third_party/gmock

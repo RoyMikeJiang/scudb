@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roy/scudb_initial
+CMAKE_SOURCE_DIR = /mnt/c/Developing/Database/Project3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roy/scudb_initial/build
+CMAKE_BINARY_DIR = /mnt/c/Developing/Database/Project3/build
 
 # Utility rule file for check.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/roy/scudb_initial/build
 include test/CMakeFiles/check.dir/progress.make
 
 test/CMakeFiles/check:
-	cd /home/roy/scudb_initial/build/test && /usr/bin/ctest --verbose
+	cd /mnt/c/Developing/Database/Project3/build/test && /usr/bin/ctest --verbose
 
 check: test/CMakeFiles/check
 check: test/CMakeFiles/check.dir/build.make
@@ -67,10 +67,10 @@ test/CMakeFiles/check.dir/build: check
 .PHONY : test/CMakeFiles/check.dir/build
 
 test/CMakeFiles/check.dir/clean:
-	cd /home/roy/scudb_initial/build/test && $(CMAKE_COMMAND) -P CMakeFiles/check.dir/cmake_clean.cmake
+	cd /mnt/c/Developing/Database/Project3/build/test && $(CMAKE_COMMAND) -P CMakeFiles/check.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/check.dir/clean
 
 test/CMakeFiles/check.dir/depend:
-	cd /home/roy/scudb_initial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/roy/scudb_initial /home/roy/scudb_initial/test /home/roy/scudb_initial/build /home/roy/scudb_initial/build/test /home/roy/scudb_initial/build/test/CMakeFiles/check.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Developing/Database/Project3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Developing/Database/Project3 /mnt/c/Developing/Database/Project3/test /mnt/c/Developing/Database/Project3/build /mnt/c/Developing/Database/Project3/build/test /mnt/c/Developing/Database/Project3/build/test/CMakeFiles/check.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/check.dir/depend
 

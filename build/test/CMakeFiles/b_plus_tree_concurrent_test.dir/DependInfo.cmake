@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/roy/scudb_initial/test/index/b_plus_tree_concurrent_test.cpp" "/home/roy/scudb_initial/build/test/CMakeFiles/b_plus_tree_concurrent_test.dir/index/b_plus_tree_concurrent_test.cpp.o"
+  "/mnt/c/Developing/Database/Project3/test/index/b_plus_tree_concurrent_test.cpp" "/mnt/c/Developing/Database/Project3/build/test/CMakeFiles/b_plus_tree_concurrent_test.dir/index/b_plus_tree_concurrent_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,9 +19,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/roy/scudb_initial/build/src/CMakeFiles/vtable.dir/DependInfo.cmake"
-  "/home/roy/scudb_initial/build/src/CMakeFiles/sqlite3.dir/DependInfo.cmake"
-  "/home/roy/scudb_initial/build/test/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/mnt/c/Developing/Database/Project3/build/src/CMakeFiles/vtable.dir/DependInfo.cmake"
+  "/mnt/c/Developing/Database/Project3/build/src/CMakeFiles/sqlite3.dir/DependInfo.cmake"
+  "/mnt/c/Developing/Database/Project3/build/test/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

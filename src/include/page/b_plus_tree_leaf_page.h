@@ -10,13 +10,13 @@
  * | HEADER | KEY(1) + RID(1) | KEY(2) + RID(2) | ... | KEY(n) + RID(n)
  *  ----------------------------------------------------------------------
  *
- *  Header format (size in byte, 24 bytes in total):
+ *  Header format (size in byte, 28 bytes in total):
  *  ---------------------------------------------------------------------
- * | PageType (4) | CurrentSize (4) | MaxSize (4) | ParentPageId (4) |
+ * | PageType (4) | LSN (4) | CurrentSize (4) | MaxSize (4) |
  *  ---------------------------------------------------------------------
- *  ------------------------------
- * | PageId (4) | NextPageId (4)
- *  ------------------------------
+ *  ----------------------------------------------------
+ * | ParentPageId (4) | PageId (4) | NextPageId (4)
+ *  ----------------------------------------------------
  */
 #pragma once
 #include <utility>
@@ -40,7 +40,7 @@ public:
   void SetNextPageId(page_id_t next_page_id);
   KeyType KeyAt(int index) const;
   int KeyIndex(const KeyType &key, const KeyComparator &comparator) const;
-  const MappingType &GetItem(int index);
+  const MappingType &GetItem(int index) const;
 
   // insert and delete methods
   int Insert(const KeyType &key, const ValueType &value,
@@ -70,4 +70,4 @@ private:
   page_id_t next_page_id_;
   MappingType array[0];
 };
-} // namespace scudb
+} // namespace cmudb

@@ -6,5 +6,5 @@ C_FLAGS = -fPIC
 
 C_DEFINES = -DSQLITE_THREADSAFE=2 -Dsqlite3_EXPORTS
 
-C_INCLUDES = -I/home/roy/scudb_initial/src -I/home/roy/scudb_initial/src/include -I/home/roy/scudb_initial/test/include -I/home/roy/scudb_initial/third_party 
+C_INCLUDES = -I/mnt/c/Developing/Database/Project3/src -I/mnt/c/Developing/Database/Project3/src/include -I/mnt/c/Developing/Database/Project3/test/include -I/mnt/c/Developing/Database/Project3/third_party 
 

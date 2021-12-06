@@ -1,4 +1,4 @@
-# Install script for directory: /home/roy/scudb_initial/src
+# Install script for directory: /mnt/c/Developing/Database/Project3/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
